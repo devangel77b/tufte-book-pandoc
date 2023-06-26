@@ -1,19 +1,17 @@
 ---
 input-file: kinematics.md
 output-file: tex/kinematics.tex
+to: latex
 
 # additions to latex template
-include-in-header: tex/preamble.tex
-include-before-body: tex/at_document_begin.tex
-# include-after-body: tex/at_document_end.tex
+template: tex/template.tex
 
 # LaTeX specifications
 pdf-engine: pdflatex
-variables:
-  documentclass: tufte-handout
-  mainfont:
-  sansfont:
-  classoption:
+
+# filters
+filters:
+  - filters/latex-sidenote.py
 
 toc: False
 number-sections: false
